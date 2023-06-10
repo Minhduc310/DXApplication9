@@ -61,8 +61,7 @@ namespace DXApplication9
         {
          
             Log_in main = new Log_in();
-            main.ShowDialog();
-            this.Hide();
+            _ = main.ShowDialog();
            
         }
     }
