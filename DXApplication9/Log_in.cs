@@ -16,11 +16,6 @@ namespace DXApplication9
             InitializeComponent();
         }
 
-        private void maskedTextBox5_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -46,5 +41,6 @@ namespace DXApplication9
         {
             this.Close();
         }
+
     }
 }

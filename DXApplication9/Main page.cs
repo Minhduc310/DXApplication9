@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,53 +18,47 @@ namespace DXApplication9
         public Main_page()
         {
             InitializeComponent();
+            HienThiVersion();
         }
-
+        private void HienThiVersion()
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
+            Text += $" v.{versionInfo.FileVersion}";
+        }
         private void Main_page_Load(object sender, EventArgs e)
         {
-            
+            Show();
+            CenterToScreen();
         }
-
-        private void ribbon_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnThayDoiQuyDinh_ItemClick(object sender, ItemClickEventArgs e)
         {
             Thay_đổi_quy_định main = new Thay_đổi_quy_định();
             main.Show();
         }
 
-        private void btnLopHoc_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnDoTuoi_ItemClick(object sender, ItemClickEventArgs e)
         {
             Quy_dinh main = new Quy_dinh();
             main.Show();
         }
 
-        private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnSiSo_ItemClick(object sender, ItemClickEventArgs e)
         {
             Quy_dinh main = new Quy_dinh();
             main.Show();
         }
 
-        private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnDiemDat_ItemClick(object sender, ItemClickEventArgs e)
         {
             Quy_dinh main = new Quy_dinh();
             main.Show();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
-         
             Log_in main = new Log_in();
             _ = main.ShowDialog();
-           
         }
     }
 }
