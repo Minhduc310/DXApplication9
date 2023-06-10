@@ -1,0 +1,266 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{411ADD37-8590-41D6-B8C3-806A6C865921}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DXApplication9</RootNamespace>
+    <AssemblyName>DXApplication9</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v21.2" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2" />
+    <Reference Include="DevExpress.Data.v21.2" />
+    <Reference Include="DevExpress.Utils.v21.2" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.2" />
+    <Reference Include="DevExpress.Printing.v21.2.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main page.Designer.cs">
+      <DependentUpon>Main page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quy dinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quy dinh.Designer.cs">
+      <DependentUpon>Quy dinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report_subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_subject.Designer.cs">
+      <DependentUpon>Report_subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create_class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_class.Designer.cs">
+      <DependentUpon>Create_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_scoreboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_scoreboard.Designer.cs">
+      <DependentUpon>Add_scoreboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_rules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_rules.Designer.cs">
+      <DependentUpon>Update_rules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add-term.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add-term.Designer.cs">
+      <DependentUpon>Add-term.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_grade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_grade.Designer.cs">
+      <DependentUpon>Add_grade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_class.Designer.cs">
+      <DependentUpon>Add_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_subject.Designer.cs">
+      <DependentUpon>Add_subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search_student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search_student.Designer.cs">
+      <DependentUpon>Search_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary.Designer.cs">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_term.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_term.Designer.cs">
+      <DependentUpon>Delete_term.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_profile.Designer.cs">
+      <DependentUpon>Delete_profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_grade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_grade.Designer.cs">
+      <DependentUpon>Delete_grade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_class.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_class.Designer.cs">
+      <DependentUpon>Delete_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_subject.Designer.cs">
+      <DependentUpon>Delete_subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log_in.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log_in.Designer.cs">
+      <DependentUpon>Log_in.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Add_student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_student.Designer.cs">
+      <DependentUpon>Add_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create_account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_account.Designer.cs">
+      <DependentUpon>Create_account.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main page.resx">
+      <DependentUpon>Main page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quy dinh.resx">
+      <DependentUpon>Quy dinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_subject.resx">
+      <DependentUpon>Report_subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_class.resx">
+      <DependentUpon>Create_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_scoreboard.resx">
+      <DependentUpon>Add_scoreboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_rules.resx">
+      <DependentUpon>Update_rules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add-term.resx">
+      <DependentUpon>Add-term.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_grade.resx">
+      <DependentUpon>Add_grade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_class.resx">
+      <DependentUpon>Add_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_subject.resx">
+      <DependentUpon>Add_subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search_student.resx">
+      <DependentUpon>Search_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary.resx">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_term.resx">
+      <DependentUpon>Delete_term.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_profile.resx">
+      <DependentUpon>Delete_profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_grade.resx">
+      <DependentUpon>Delete_grade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_class.resx">
+      <DependentUpon>Delete_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_subject.resx">
+      <DependentUpon>Delete_subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log_in.resx">
+      <DependentUpon>Log_in.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_student.resx">
+      <DependentUpon>Add_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_account.resx">
+      <DependentUpon>Create_account.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
