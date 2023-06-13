@@ -382,5 +382,14 @@ namespace DXApplication9
 
         #endregion
 
+        private void btnMonHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Utilities.ShowForm("Subject");
+        }
+
+        private void btnDiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Utilities.ShowForm("Score");
+        }
     }
 }

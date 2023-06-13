@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2">
-      <HintPath>C:\Users\ACER-E5\source\repos\quan-ly-hoc-sinh\BUS\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\quan-ly-hoc-sinh-main\BUS\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v22.2" />
     <Reference Include="DevExpress.Data.Desktop.v22.2" />
@@ -60,12 +60,14 @@
     <Compile Include="BUS\LoaiNguoiDungBUS.cs" />
     <Compile Include="BUS\NguoiDungBUS.cs" />
     <Compile Include="BUS\QuyDinhBUS.cs" />
+    <Compile Include="BUS\SubjectBUS.cs" />
     <Compile Include="Components\Helpers.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\HocSinhDAO.cs" />
     <Compile Include="DAO\LoaiNguoiDungDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
     <Compile Include="DAO\QuyDinhDAO.cs" />
+    <Compile Include="DAO\SubjectDAO.cs" />
     <Compile Include="DTO\HocSinhDTO.cs" />
     <Compile Include="DTO\LoaiNguoiDungDTO.cs" />
     <Compile Include="DTO\NguoiDungDTO.cs" />
@@ -110,11 +112,23 @@
     <Compile Include="Add_scoreboard.Designer.cs">
       <DependentUpon>Add_scoreboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Score.Designer.cs">
+      <DependentUpon>Score.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subject.Designer.cs">
+      <DependentUpon>Subject.cs</DependentUpon>
     </Compile>
     <Compile Include="Thay_đổi_quy_định.cs">
       <SubType>Form</SubType>
@@ -218,8 +232,14 @@
     <EmbeddedResource Include="Add_scoreboard.resx">
       <DependentUpon>Add_scoreboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Score.resx">
+      <DependentUpon>Score.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subject.resx">
+      <DependentUpon>Subject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thay_đổi_quy_định.resx">
       <DependentUpon>Thay_đổi_quy_định.cs</DependentUpon>

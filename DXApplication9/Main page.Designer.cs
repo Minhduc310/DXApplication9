@@ -88,7 +88,6 @@
             // 
             // ribbon
             // 
-            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -126,16 +125,14 @@
             this.btnPhucHoi,
             this.btnQLNguoiDung});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(4);
             this.ribbon.MaxItemId = 39;
             this.ribbon.Name = "ribbon";
-            this.ribbon.OptionsMenuMinWidth = 385;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageQuanLy,
             this.ribbonPageThongKe,
             this.ribbonPageQuyDinh});
             this.ribbon.QuickToolbarItemLinks.Add(this.buttonFile);
-            this.ribbon.Size = new System.Drawing.Size(1434, 178);
+            this.ribbon.Size = new System.Drawing.Size(1229, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnLopHoc
@@ -177,6 +174,7 @@
             this.btnMonHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnMonHoc.ImageOptions.Image")));
             this.btnMonHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnMonHoc.ImageOptions.LargeImage")));
             this.btnMonHoc.Name = "btnMonHoc";
+            this.btnMonHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMonHoc_ItemClick);
             // 
             // btnDiem
             // 
@@ -185,6 +183,7 @@
             this.btnDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDiem.ImageOptions.Image")));
             this.btnDiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDiem.ImageOptions.LargeImage")));
             this.btnDiem.Name = "btnDiem";
+            this.btnDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDiem_ItemClick);
             // 
             // btnKetQua
             // 
@@ -508,11 +507,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 941);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 764);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1434, 37);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1229, 31);
             // 
             // barLinkContainerDangNhap_DangXuat_DoiMatKhau
             // 
@@ -524,9 +522,9 @@
             this.lblNguoiDung.BackColor = System.Drawing.Color.LightGray;
             this.lblNguoiDung.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNguoiDung.ForeColor = System.Drawing.Color.Black;
-            this.lblNguoiDung.Location = new System.Drawing.Point(42, 954);
+            this.lblNguoiDung.Location = new System.Drawing.Point(36, 775);
             this.lblNguoiDung.Name = "lblNguoiDung";
-            this.lblNguoiDung.Size = new System.Drawing.Size(167, 15);
+            this.lblNguoiDung.Size = new System.Drawing.Size(139, 14);
             this.lblNguoiDung.TabIndex = 0;
             this.lblNguoiDung.Text = "Người dùng đang đăng nhập: ";
             this.lblNguoiDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -537,9 +535,9 @@
             this.lblTenNguoiDung.BackColor = System.Drawing.Color.LightGray;
             this.lblTenNguoiDung.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNguoiDung.ForeColor = System.Drawing.Color.Red;
-            this.lblTenNguoiDung.Location = new System.Drawing.Point(215, 954);
+            this.lblTenNguoiDung.Location = new System.Drawing.Point(184, 775);
             this.lblTenNguoiDung.Name = "lblTenNguoiDung";
-            this.lblTenNguoiDung.Size = new System.Drawing.Size(42, 15);
+            this.lblTenNguoiDung.Size = new System.Drawing.Size(40, 13);
             this.lblTenNguoiDung.TabIndex = 2;
             this.lblTenNguoiDung.Text = "Khách";
             this.lblTenNguoiDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -564,17 +562,16 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.Cyan;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
-            this.ClientSize = new System.Drawing.Size(1434, 978);
+            this.ClientSize = new System.Drawing.Size(1229, 795);
             this.Controls.Add(this.lblTenNguoiDung);
             this.Controls.Add(this.lblNguoiDung);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main_page";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
