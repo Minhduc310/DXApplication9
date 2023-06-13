@@ -7,25 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 
 namespace DXApplication9
 {
-    public partial class Xóa_hồ_sơ_học_sinh : DevExpress.XtraEditors.XtraForm
+    public partial class Password_change : Form
     {
-        public Xóa_hồ_sơ_học_sinh()
+        public Password_change()
         {
             InitializeComponent();
         }
 
-        private void labelControl5_Click(object sender, EventArgs e)
+        private void btnDongY_Click(object sender, EventArgs e)
         {
-
+            txtNewPassword.Focus();
+            DialogResult = DialogResult.OK;
         }
 
-        private void Xóa_hồ_sơ_học_sinh_Load(object sender, EventArgs e)
+        private void btnHuyBo_Click(object sender, EventArgs e)
         {
-
+            DialogResult = DialogResult.Cancel;
         }
     }
 }

@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>C:\Users\ACER-E5\source\repos\quan-ly-hoc-sinh\BUS\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.BonusSkins.v22.2" />
     <Reference Include="DevExpress.Data.Desktop.v22.2" />
     <Reference Include="DevExpress.Drawing.v22.2" />
@@ -53,17 +56,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\HocSinhBUS.cs" />
+    <Compile Include="BUS\LoaiNguoiDungBUS.cs" />
+    <Compile Include="BUS\NguoiDungBUS.cs" />
+    <Compile Include="BUS\QuyDinhBUS.cs" />
+    <Compile Include="Components\Helpers.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\HocSinhDAO.cs" />
+    <Compile Include="DAO\LoaiNguoiDungDAO.cs" />
+    <Compile Include="DAO\NguoiDungDAO.cs" />
+    <Compile Include="DAO\QuyDinhDAO.cs" />
+    <Compile Include="DTO\HocSinhDTO.cs" />
+    <Compile Include="DTO\LoaiNguoiDungDTO.cs" />
+    <Compile Include="DTO\NguoiDungDTO.cs" />
     <Compile Include="Main page.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main page.Designer.cs">
       <DependentUpon>Main page.cs</DependentUpon>
     </Compile>
-    <Compile Include="Quy dinh.cs">
+    <Compile Include="Password change.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Quy dinh.Designer.cs">
-      <DependentUpon>Quy dinh.cs</DependentUpon>
+    <Compile Include="Password change.Designer.cs">
+      <DependentUpon>Password change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Quy_dinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quy_dinh.Designer.cs">
+      <DependentUpon>Quy_dinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Report_subject.cs">
       <SubType>Form</SubType>
@@ -83,11 +110,17 @@
     <Compile Include="Add_scoreboard.Designer.cs">
       <DependentUpon>Add_scoreboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Update_rules.cs">
+    <Compile Include="Student.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update_rules.Designer.cs">
-      <DependentUpon>Update_rules.cs</DependentUpon>
+    <Compile Include="Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thay_đổi_quy_định.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thay_đổi_quy_định.Designer.cs">
+      <DependentUpon>Thay_đổi_quy_định.cs</DependentUpon>
     </Compile>
     <Compile Include="Add-term.cs">
       <SubType>Form</SubType>
@@ -113,12 +146,6 @@
     <Compile Include="Add_subject.Designer.cs">
       <DependentUpon>Add_subject.cs</DependentUpon>
     </Compile>
-    <Compile Include="Search_student.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Search_student.Designer.cs">
-      <DependentUpon>Search_student.cs</DependentUpon>
-    </Compile>
     <Compile Include="Summary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +157,6 @@
     </Compile>
     <Compile Include="Delete_term.Designer.cs">
       <DependentUpon>Delete_term.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Delete_profile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Delete_profile.Designer.cs">
-      <DependentUpon>Delete_profile.cs</DependentUpon>
     </Compile>
     <Compile Include="Delete_grade.cs">
       <SubType>Form</SubType>
@@ -163,23 +184,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Add_student.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_student.Designer.cs">
-      <DependentUpon>Add_student.cs</DependentUpon>
-    </Compile>
     <Compile Include="Create_account.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Create_account.Designer.cs">
       <DependentUpon>Create_account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main page.resx">
       <DependentUpon>Main page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Quy dinh.resx">
-      <DependentUpon>Quy dinh.cs</DependentUpon>
+    <EmbeddedResource Include="Password change.resx">
+      <DependentUpon>Password change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quy_dinh.resx">
+      <DependentUpon>Quy_dinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report_subject.resx">
       <DependentUpon>Report_subject.cs</DependentUpon>
@@ -190,8 +218,11 @@
     <EmbeddedResource Include="Add_scoreboard.resx">
       <DependentUpon>Add_scoreboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update_rules.resx">
-      <DependentUpon>Update_rules.cs</DependentUpon>
+    <EmbeddedResource Include="Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thay_đổi_quy_định.resx">
+      <DependentUpon>Thay_đổi_quy_định.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Add-term.resx">
       <DependentUpon>Add-term.cs</DependentUpon>
@@ -205,17 +236,11 @@
     <EmbeddedResource Include="Add_subject.resx">
       <DependentUpon>Add_subject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Search_student.resx">
-      <DependentUpon>Search_student.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Summary.resx">
       <DependentUpon>Summary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Delete_term.resx">
       <DependentUpon>Delete_term.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Delete_profile.resx">
-      <DependentUpon>Delete_profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Delete_grade.resx">
       <DependentUpon>Delete_grade.cs</DependentUpon>
@@ -230,20 +255,11 @@
       <DependentUpon>Log_in.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Add_student.resx">
-      <DependentUpon>Add_student.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Create_account.resx">
       <DependentUpon>Create_account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

@@ -16,31 +16,19 @@ namespace DXApplication9
             InitializeComponent();
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Main_page main = new Main_page();
-      
-            main.Show();
+            DialogResult = DialogResult.OK;
         }
 
-        private void simpleButton3_Click(object sender, EventArgs e)
+        private void btnHuyBo_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Tạo_tài_khoản_mới main = new Tạo_tài_khoản_mới();
-        
-            main.Show();
+            DialogResult = DialogResult.Cancel;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            if (e.KeyCode == Keys.Enter) DialogResult = DialogResult.OK;
         }
-
-        private void checkButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
     }
 }
