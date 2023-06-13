@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student));
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.txtGioiTinh = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -51,6 +51,11 @@
             this.lblTenHocSinh = new System.Windows.Forms.Label();
             this.lblMaHocSinh = new System.Windows.Forms.Label();
             this.navPanelTimKiem = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
+            this.chkTimTheoTen = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.chkTimTheoMa = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.txtTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lblNhapThongTinTimKiem = new System.Windows.Forms.Label();
             this.dgvHocSinh = new System.Windows.Forms.DataGridView();
             this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,11 +76,7 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorRefreshItem = new System.Windows.Forms.ToolStripButton();
-            this.lblNhapThongTinTimKiem = new System.Windows.Forms.Label();
-            this.txtTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.chkTimTheoMa = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.chkTimTheoTen = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
+            this.bindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.groupBoxDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navPaneRight)).BeginInit();
             this.navPaneRight.SuspendLayout();
@@ -371,6 +372,62 @@
             this.navPanelTimKiem.Name = "navPanelTimKiem";
             this.navPanelTimKiem.Size = new System.Drawing.Size(269, 455);
             // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTimKiem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btnTimKiem.Location = new System.Drawing.Point(19, 127);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(247, 23);
+            this.btnTimKiem.TabIndex = 4;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // chkTimTheoTen
+            // 
+            this.chkTimTheoTen.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.chkTimTheoTen.Location = new System.Drawing.Point(19, 98);
+            this.chkTimTheoTen.Name = "chkTimTheoTen";
+            this.chkTimTheoTen.Size = new System.Drawing.Size(247, 23);
+            this.chkTimTheoTen.TabIndex = 4;
+            this.chkTimTheoTen.Text = "Tìm theo tên học sinh";
+            // 
+            // chkTimTheoMa
+            // 
+            this.chkTimTheoMa.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.chkTimTheoMa.Checked = true;
+            this.chkTimTheoMa.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkTimTheoMa.CheckValue = "Y";
+            this.chkTimTheoMa.Location = new System.Drawing.Point(19, 69);
+            this.chkTimTheoMa.Name = "chkTimTheoMa";
+            this.chkTimTheoMa.Size = new System.Drawing.Size(247, 23);
+            this.chkTimTheoMa.TabIndex = 3;
+            this.chkTimTheoMa.Text = "Tìm theo mã học sinh";
+            // 
+            // txtTimKiem
+            // 
+            // 
+            // 
+            // 
+            this.txtTimKiem.Border.Class = "TextBoxBorder";
+            this.txtTimKiem.Location = new System.Drawing.Point(19, 31);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(247, 22);
+            this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.WatermarkText = "Nhập thông tin cần tìm vào đây";
+            // 
+            // lblNhapThongTinTimKiem
+            // 
+            this.lblNhapThongTinTimKiem.AutoSize = true;
+            this.lblNhapThongTinTimKiem.Location = new System.Drawing.Point(16, 12);
+            this.lblNhapThongTinTimKiem.Name = "lblNhapThongTinTimKiem";
+            this.lblNhapThongTinTimKiem.Size = new System.Drawing.Size(147, 16);
+            this.lblNhapThongTinTimKiem.TabIndex = 0;
+            this.lblNhapThongTinTimKiem.Text = "Nhập thông tin tìm kiếm:";
+            // 
             // dgvHocSinh
             // 
             this.dgvHocSinh.AllowUserToAddRows = false;
@@ -421,8 +478,8 @@
             // colNgaySinh
             // 
             this.colNgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
-            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
             this.colNgaySinh.HeaderText = "Ngày sinh";
             this.colNgaySinh.MinimumWidth = 6;
             this.colNgaySinh.Name = "colNgaySinh";
@@ -467,7 +524,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.bindingNavigatorRefreshItem});
+            this.bindingNavigatorRefreshItem,
+            this.bindingNavigatorSaveItem});
             this.bindingNavigatorHocSinh.Location = new System.Drawing.Point(4, 19);
             this.bindingNavigatorHocSinh.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorHocSinh.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -580,61 +638,15 @@
             this.bindingNavigatorRefreshItem.Text = "Làm mới danh sách";
             this.bindingNavigatorRefreshItem.Click += new System.EventHandler(this.bindingNavigatorRefreshItem_Click);
             // 
-            // lblNhapThongTinTimKiem
+            // bindingNavigatorSaveItem
             // 
-            this.lblNhapThongTinTimKiem.AutoSize = true;
-            this.lblNhapThongTinTimKiem.Location = new System.Drawing.Point(16, 12);
-            this.lblNhapThongTinTimKiem.Name = "lblNhapThongTinTimKiem";
-            this.lblNhapThongTinTimKiem.Size = new System.Drawing.Size(147, 16);
-            this.lblNhapThongTinTimKiem.TabIndex = 0;
-            this.lblNhapThongTinTimKiem.Text = "Nhập thông tin tìm kiếm:";
-            // 
-            // txtTimKiem
-            // 
-            // 
-            // 
-            // 
-            this.txtTimKiem.Border.Class = "TextBoxBorder";
-            this.txtTimKiem.Location = new System.Drawing.Point(19, 31);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(247, 22);
-            this.txtTimKiem.TabIndex = 1;
-            this.txtTimKiem.WatermarkText = "Nhập thông tin cần tìm vào đây";
-            // 
-            // chkTimTheoMa
-            // 
-            this.chkTimTheoMa.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.chkTimTheoMa.Checked = true;
-            this.chkTimTheoMa.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkTimTheoMa.CheckValue = "Y";
-            this.chkTimTheoMa.Location = new System.Drawing.Point(19, 69);
-            this.chkTimTheoMa.Name = "chkTimTheoMa";
-            this.chkTimTheoMa.Size = new System.Drawing.Size(247, 23);
-            this.chkTimTheoMa.TabIndex = 3;
-            this.chkTimTheoMa.Text = "Tìm theo mã học sinh";
-            // 
-            // chkTimTheoTen
-            // 
-            this.chkTimTheoTen.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.chkTimTheoTen.Location = new System.Drawing.Point(19, 98);
-            this.chkTimTheoTen.Name = "chkTimTheoTen";
-            this.chkTimTheoTen.Size = new System.Drawing.Size(247, 23);
-            this.chkTimTheoTen.TabIndex = 4;
-            this.chkTimTheoTen.Text = "Tìm theo tên học sinh";
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTimKiem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.btnTimKiem.Location = new System.Drawing.Point(19, 127);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(247, 23);
-            this.btnTimKiem.TabIndex = 4;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.bindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorSaveItem.Image")));
+            this.bindingNavigatorSaveItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bindingNavigatorSaveItem.Name = "bindingNavigatorSaveItem";
+            this.bindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 22);
+            this.bindingNavigatorSaveItem.Text = "Lưu";
+            this.bindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
             // 
             // Student
             // 
@@ -709,5 +721,6 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX chkTimTheoTen;
         private DevComponents.DotNetBar.Controls.CheckBoxX chkTimTheoMa;
         private DevComponents.DotNetBar.Controls.TextBoxX txtTimKiem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorSaveItem;
     }
 }

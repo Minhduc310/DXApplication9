@@ -12,7 +12,7 @@ namespace DXApplication9.DAO
     internal class DataProvider
     {
         private static DataProvider instance;
-        private string connectionString = "Data Source=DESKTOP-N9UTDM5;Initial Catalog=QuanLyHocSinh;Integrated Security=True";
+        private string connectionString = "Data Source=DESKTOP-FI68AV1;Initial Catalog=QuanLyHocSinh;Integrated Security=True";
 
         private DataProvider() { }
 

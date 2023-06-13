@@ -119,5 +119,31 @@ namespace DXApplication9
             if (chkTimTheoMa.Checked) HocSinhBUS.Instance.TimTheoMa(txtTimKiem.Text);
             else HocSinhBUS.Instance.TimTheoTen(txtTimKiem.Text);
         }
+
+        private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            string[] colNames = {
+                "colMaHocSinh",
+                "colHoTen",
+                "colGioiTinh",
+                "colNgaySinh",
+                "colDiaChi",
+                "colEmail",
+            };
+            if (KiemTraTruocKhiLuu.KiemTraDataGridView(dgvHocSinh, colNames) &&
+                KiemTraTruocKhiLuu.KiemTraDoTuoi(dgvHocSinh, "colNgaySinh"))
+            {
+                bindingNavigatorPositionItem.Focus();
+                BindingSource bindingSource = bindingNavigatorHocSinh.BindingSource;
+                HocSinhBUS.Instance.CapNhatHocSinh((DataTable)bindingSource.DataSource);
+
+                MessageBox.Show(
+                    "Dữ liệu đã được lưu vào CSDL",
+                    "Cập nhật thành công",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+            }
+        }
     }
 }
