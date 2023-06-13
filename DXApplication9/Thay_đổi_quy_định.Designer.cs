@@ -238,6 +238,7 @@
             this.Controls.Add(this.labelControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Thay_đổi_quy_định";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thay đổi quy định";
             this.Load += new System.EventHandler(this.Thay_đổi_quy_định_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTuoiCanDuoi)).EndInit();

@@ -47,13 +47,6 @@ namespace DXApplication9
                 else
                 {
                     QuyDinhBUS.Instance.CapNhatQuyDinhDoTuoi(txtTuoiCanDuoi.Value, txtTuoiCanTren.Value);
-                    MessageBox.Show(
-                        "Cập nhật thành công quy định về độ tuổi !",
-                        "COMPLETED",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
-                    HienThi();
                 }
 
                 if (txtSiSoCanDuoi.Value > txtSiSoCanTren.Value)
@@ -66,18 +59,11 @@ namespace DXApplication9
                 else
                 {
                     QuyDinhBUS.Instance.CapNhatQuyDinhSiSo(txtSiSoCanDuoi.Value, txtSiSoCanTren.Value);
-                    MessageBox.Show(
-                        "Cập nhật thành công quy định về sỉ số !",
-                        "COMPLETED",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
-                    HienThi();
                 }
 
                 QuyDinhBUS.Instance.CapNhatQuyDinhDiemDat(txtDiemDat.Value);
                 MessageBox.Show(
-                    "Cập nhật thành công quy định về điểm đạt !",
+                    "Cập nhật thành công quy định!",
                     "COMPLETED",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information

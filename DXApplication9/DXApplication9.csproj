@@ -56,16 +56,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\HocKyBUS.cs" />
     <Compile Include="BUS\HocSinhBUS.cs" />
     <Compile Include="BUS\LoaiNguoiDungBUS.cs" />
+    <Compile Include="BUS\NamHocBUS.cs" />
     <Compile Include="BUS\NguoiDungBUS.cs" />
     <Compile Include="BUS\QuyDinhBUS.cs" />
+    <Compile Include="Class_seperate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class_seperate.Designer.cs">
+      <DependentUpon>Class_seperate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\Helpers.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\HocKyDAO.cs" />
     <Compile Include="DAO\HocSinhDAO.cs" />
     <Compile Include="DAO\LoaiNguoiDungDAO.cs" />
+    <Compile Include="DAO\NamHocDAO.cs" />
     <Compile Include="DAO\NguoiDungDAO.cs" />
     <Compile Include="DAO\QuyDinhDAO.cs" />
+    <Compile Include="DTO\HocKyDTO.cs" />
     <Compile Include="DTO\HocSinhDTO.cs" />
     <Compile Include="DTO\LoaiNguoiDungDTO.cs" />
     <Compile Include="DTO\NguoiDungDTO.cs" />
@@ -80,11 +91,6 @@
     </Compile>
     <Compile Include="Password change.Designer.cs">
       <DependentUpon>Password change.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Quy_dinh.cs">
       <SubType>Form</SubType>
@@ -115,6 +121,12 @@
     </Compile>
     <Compile Include="Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Term.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Term.Designer.cs">
+      <DependentUpon>Term.cs</DependentUpon>
     </Compile>
     <Compile Include="Thay_đổi_quy_định.cs">
       <SubType>Form</SubType>
@@ -196,15 +208,20 @@
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Year.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Year.Designer.cs">
+      <DependentUpon>Year.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Class_seperate.resx">
+      <DependentUpon>Class_seperate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main page.resx">
       <DependentUpon>Main page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Password change.resx">
       <DependentUpon>Password change.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Quy_dinh.resx">
       <DependentUpon>Quy_dinh.cs</DependentUpon>
@@ -220,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student.resx">
       <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Term.resx">
+      <DependentUpon>Term.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thay_đổi_quy_định.resx">
       <DependentUpon>Thay_đổi_quy_định.cs</DependentUpon>
@@ -260,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Year.resx">
+      <DependentUpon>Year.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

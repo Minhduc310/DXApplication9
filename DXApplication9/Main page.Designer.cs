@@ -161,6 +161,7 @@
             this.btnHocKy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHocKy.ImageOptions.Image")));
             this.btnHocKy.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHocKy.ImageOptions.LargeImage")));
             this.btnHocKy.Name = "btnHocKy";
+            this.btnHocKy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHocKy_ItemClick);
             // 
             // btnNamHoc
             // 
@@ -169,6 +170,7 @@
             this.btnNamHoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNamHoc.ImageOptions.Image")));
             this.btnNamHoc.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNamHoc.ImageOptions.LargeImage")));
             this.btnNamHoc.Name = "btnNamHoc";
+            this.btnNamHoc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNamHoc_ItemClick);
             // 
             // btnMonHoc
             // 
@@ -243,6 +245,7 @@
             this.btnPhanLop.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhanLop.ImageOptions.Image")));
             this.btnPhanLop.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhanLop.ImageOptions.LargeImage")));
             this.btnPhanLop.Name = "btnPhanLop";
+            this.btnPhanLop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhanLop_ItemClick);
             // 
             // btnKQLHMonHoc
             // 

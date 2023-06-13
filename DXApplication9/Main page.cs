@@ -215,6 +215,21 @@ namespace DXApplication9
             Utilities.ShowForm("Thay_đổi_quy_định", false);
         }
 
+        private void btnHocKy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Utilities.ShowForm("Term");
+        }
+
+        private void btnNamHoc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Utilities.ShowForm("Year");
+        }
+
+        private void btnPhanLop_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Utilities.ShowForm("Class_seperate");
+        }
+
 
         #region Giao diện mặc định
         public void ShowGiaoDienMacDinh()
@@ -373,6 +388,7 @@ namespace DXApplication9
             btnThayDoiQuyDinh.Enabled = false;
             btnQLNguoiDung.Enabled = false;
         }
+
 
 
 
